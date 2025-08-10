@@ -273,7 +273,8 @@ footer {
     height: 100%;   /* 使用视口高度确保全屏覆盖 */
     min-height: 500px;     /* 保留最小高度 */
     /* max-height: 1080px; */
-    background: url(../assets/lead-bg.jpg);
+    background: url(../assets/lead-bg.jpg) no-repeat center/cover;
+    background-repeat: no-repeat; /* 禁止重复 */
     background-size: cover;
     background-position: center -100px;  
     background-attachment: scroll;

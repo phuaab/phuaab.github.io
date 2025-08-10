@@ -960,6 +960,10 @@ footer {
         min-height: auto;
         max-height: auto;
         padding: 100px 15px
+        /* 新增以下属性禁止重复并适配尺寸 */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;        
     }
 
     #lead-content {
@@ -1056,16 +1060,20 @@ footer {
     }
 }
 
-@media only screen and (max-width: 480px) {
+ @media only screen and (max-width: 480px) {     /* 仅对屏幕设备生效（排除打印机等） */
+                                                /* 当屏幕宽度≤480px时生效（典型手机尺寸） */
     #lead-content h1 {
+        /* ​主标题字体缩小至1.5em（默认值约24px → 调整后约24px） */
         font-size: 1.5em
     }
 
     #lead-content h2 {
+        /* ​副标题字体缩小至1em（默认值约16px → 调整后约16px） */
         font-size: 1em
     }
 
     #lead-content a {
+        /* ​按钮字体缩小至0.9em（约14.4px），​内边距减小（更紧凑） */
         font-size: 0.9em;
         padding: 5px 10px
     }

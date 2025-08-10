@@ -956,14 +956,14 @@ footer {
 
 @media only screen and (max-width: 992px) {
     #lead {
-        height: 992px;
+        height: 100vh; /* 使用视口高度确保全屏覆盖 */
         min-height: auto;
         max-height: auto;
         padding: 100px 15px
-        /* 新增以下属性禁止重复并适配尺寸 */
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;        
+        background-size: auto 100%; /* 关键修改：高度100%填充，宽度自适应 */
+        background-position: center; 
+        overflow: hidden; /* 隐藏溢出的左右部分 */
     }
 
     #lead-content {

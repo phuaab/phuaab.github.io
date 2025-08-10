@@ -275,6 +275,8 @@ footer {
     max-height: 1080px;
     background: url(../assets/lead-bg.jpg);
     background-size: cover;
+    background-position: center -100px;  
+    background-attachment: scroll;
     padding: 15px;
     width: 100%;
     object-fit: cover;
@@ -289,6 +291,8 @@ footer {
     right: 0;
     bottom: 0;
     background-image: linear-gradient(to bottom, rgb(238, 122, 107), rgb(250, 148, 241));
+    background-attachment: scroll; /* 新增 */
+    background-position: center -100px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -310,6 +314,7 @@ footer {
     -moz-filter: blur(0.2px);
     -ms-filter: blur(0.2px);
     filter: blur(0.2px);
+    background-attachment: fixed;
 }
 
 #lead-content {

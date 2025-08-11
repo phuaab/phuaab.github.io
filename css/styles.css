@@ -35,10 +35,10 @@ body.active {
     margin: 0
 }
 
-.no-js #experience-timeline>div h4 {
+.no-js #experience-timeline>div h4 { 
     font-size: 1.2em;
     font-weight: 300;
-    color: #7e8890;
+    color: #3c0411;
     margin: 0 0 15px 0
 }
 
@@ -249,7 +249,7 @@ footer {
     content: '';
     top: 100%;
     height: 1px;
-    width: 50px;
+    width: 80%;        /* 使用100%宽度覆盖父元素 */
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -276,7 +276,7 @@ footer {
     background: url(../assets/lead-bg.jpg) no-repeat center/cover;
     background-repeat: no-repeat; /* 禁止重复 */
     background-size: cover;
-    background-position: center -100px;  
+    background-position: center;  
     background-attachment: scroll;
     padding: 15px;
     width: 100%;
@@ -415,8 +415,10 @@ footer {
 #about .portrait {
     width: 15rem;
     height: 15rem;
-    border-radius: 50%;
-    margin-bottom: 1.5rem
+    border-radius: 50%; /*将元素变为圆形​（因为宽度和高度相等）*/
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    object-position: center - 10px; /* 确保头像在容器中居中显示 */
 }
 
 #about h2 {
@@ -451,7 +453,7 @@ footer {
     max-width: 1000px
 }
 
-#experience-timeline:before {
+#experience-timeline:before {   /*贯穿容器顶部到底部的实线*/
     position: absolute;
     content: '';
     top: 0;
@@ -460,11 +462,11 @@ footer {
     right: auto;
     height: 100%;
     width: 3px;
-    background: #3498db;
+    background: #1985cd;
     z-index: 0
 }
 
-#experience-timeline:after {
+#experience-timeline:after {        /*贯穿容器底部的渐变线*/
     position: absolute;
     content: '';
     width: 3px;
@@ -492,11 +494,28 @@ footer {
     margin: 0
 }
 
+.vtimeline-content .header-row {
+    display: flex;
+    justify-content: space-between; /* 左右两端对齐 */
+    align-items: center; /* 垂直居中 */
+    /* margin-bottom: 15px; 保留底部间距 */
+}
+
 .vtimeline-content h4 {
     font-size: 1.2em;
     font-weight: 300;
     color: #7e8890;
     margin: 0 0 15px 0
+}
+
+.vtimeline-content h5 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #7e8890;
+    margin: 0; /* 清除原有下边距 */
+    /* float: right; */
+    margin: 0 0 15px 0       
+    /* 上=0, 右=0, 下=15px, 左=0 */
 }
 
 .vtimeline-content p {
@@ -567,18 +586,20 @@ footer {
 }
 
 .education-block span {
-    color: #74808a;
+    color: #8a7478;
     float: right
 }
 
 .education-block h4 {
     color: #74808a;
     clear: both;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.0em;
     margin: 0 0 15px 0
 }
 
 .education-block p,
+
 .education-block ul {
     margin: 0;
     color: #74808a;
@@ -733,6 +754,12 @@ footer {
     background: #fff;
     animation-name: zoom;
     animation-duration: 0.6s
+}
+
+.highlight {
+    font-weight: bold;
+    font-style: italic;
+    color: #0585d5;
 }
 
 @keyframes zoom {
@@ -929,6 +956,35 @@ footer {
     padding: 0 0 0 15px
 }
 
+/* github格式 */
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: #f2f2f5; /* GitHub文字颜色 */
+    background: transparent !important; /* 关键修改：背景透明 */
+    transition: all 0.3s; /* 平滑过渡效果 */
+    border: none !important; /* 强制清除边框 */
+}
+.github-link:hover {
+    background: transparent !important; /* 关键修改：背景透明 */
+    transform: translateY(-2px); /* 轻微上浮效果 */
+    box-shadow: 0 4px 8px rgba(244, 239, 239, 0.1); /* 悬停阴影 */
+    border: none !important; /* 确保悬停状态无边框 */
+}
+.github-link i {
+    margin-left: 0px;   /* 图标与文字间距 */
+    font-size: 1.2em;     /* 放大图标 */
+}
+
+a:hover .fa-github, 
+a:hover span {
+    color: #6e5494; /* GitHub主题紫色 */
+    transform: scale(1.5); /* 轻微放大 */
+    transition: all 0.3s ease;
+}
+
 @media only screen and (max-width: 750px) {
 
     #experience-timeline:before,
@@ -960,7 +1016,7 @@ footer {
         height: 100%;   /* 使用视口高度确保全屏覆盖 */
         min-height: 500px; /* 保留最小高度 */
         max-height: auto;
-        padding: 100px 15px
+        padding: 100px 15px        /* ​上下内边距​：100px, 左右内边距​：15px */
         /* background-repeat: no-repeat; 禁止重复 */
         /* background-size: auto 100%; 关键修改：高度100%填充，宽度自适应 */
         /* background-position: center;  */
@@ -993,8 +1049,8 @@ footer {
 
 @media only screen and (max-width: 768px) {
     header {
-        position: fixed;
-        display: none;
+        position: fixed;        
+        display: none;      
         z-index: 999;
         animation: none;
         bottom: 0;
@@ -1002,7 +1058,7 @@ footer {
     }
 
     #mobile-menu-open,
-    #mobile-menu-close {
+    #mobile-menu-close {           /* 用于触发移动菜单的展开/关闭 */
         display: block
     }
 

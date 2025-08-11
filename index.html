@@ -48,7 +48,7 @@
     <!-- End header -->
 
     <div id="lead">
-        <img class="coverpic-hober" />;
+        <img class="coverpic-hober" />
         <div id="lead-content">
             <h1>Peng HUA (花鹏)</h1>
             <h2>PhD in Nanoscience & Technology</h2>
@@ -73,12 +73,12 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <img class="portrait" src="assets/portrait.jpg" alt="protrait image">
+                    <img class="portrait" src="assets/portrait_cut.jpg" alt="protrait image">
                 </div>
                 <div class="col-md-8 vertical-center">
                     <p>
-                        Currently a ​4th-year PhD Student at The Hong Kong University of Science and Technology (HKUST), 
-                        studying soft matter, colloids, and phase transitions using Molecular Dynamics simulations and photolithography experiments.​
+                        Currently a <span class="highlight">4th-year PhD candidate</span> in <strong>Nanoscience & Technology</strong> at the Hong Kong University of Science and Technology <em>(香港科技大学)</em>, researching multiphysics simulation 
+                        and image segmentation using deep learning and AI, employing Molecular Dynamics <em>(LAMMPS)</em> and photolithography experiments.
                     </p>
                 </div>
 
@@ -92,28 +92,105 @@
         <div id="experience-timeline">
 
             <!-- One Experience Block -->
-            <div data-date="2012.09 - 2013.06">
-                <h3>厦门市职业圈信息科技有限公司</h3>
-                <h4>市场营销（实习生</h4>
+            <div data-date="2023.09 - Present">
+                <h3>Modeling of Field-Driven Granular Collective Dynamics</h3>
+                <div class="header-row"> <!-- 新增包裹容器 -->
+                    <h4>
+                        <span>Supervisor: Prof. Yilong Han (韩一龙教授)</span>
+                    </h4>
+                    <h5>
+                        HKUST
+                    </h5>
+                </div>
                 <p>
-                    负责公司线上端资源的销售工作（以开拓客户为主），公司主要资源以广点通、智汇推、百度、小米、360、沃门户等；
-                    <br>
-                    实时了解行业的变化，跟踪客户的详细数据，为客户制定更完善的投放计划（合作过珍爱网、世纪佳缘、56视频、京东等客户）
+                    <li style="margin-bottom: 10px;">Developed a hybrid machine vision framework <em>(YOLO-Unet-OpenCV)</em> for high-speed granular tracking,
+                    achieving >95% segmentation accuracy under magnetic interference.</li>
+                    <!-- <br> -->
+                    <li>Simulated collective bead motions via <em>COMSOL & C++</em> simulation, coupling electromagnetic fields, contact mechanics, and fluid-structure interactions to resolve self-organized pattern formation.</li>
                 </p>
             </div>
             <!-- End of One Experience Block -->
 
 
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="2021.09 – Present">
+                <h3>Multiscale Dynamics of Magnetically Programmable Confined Systems</h3>
+                <div class="header-row"> <!-- 新增包裹容器 -->
+                    <h4>
+                        <span>Supervisor: Prof. Yilong Han (韩一龙教授)</span>
+                    </h4>
+                    <h5>
+                        HKUST
+                    </h5>
+                </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat
-                    laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur
-                    libero. Morbi dapibus porta quam laoreet placerat.
+                    <li style="margin-bottom: 10px;">Simulated 2D phase transitions in binary system via <em>LAMMPS</em>, revealing critical melting dynamics and defect
+                    evolution under thermal gradients.</li>
+                    <!-- <br> -->
+                    <li style="margin-bottom: 10px;">Engineered 50-nm accuracy E-beam lithography nanoparticles for enhanced thermal dissipation, achieving
+                    40% heat transfer efficiency matching <em>COMSOL</em> electro-thermal predictions.</li>
+                    <li style="margin-bottom: 10px;"> Assembled SU8-based microrobots via photolithography, enabling magnetic-field-driven collective shape morphing for targeted drug delivery with 1 μm spatial precision.</li>   
+                    <li>Designed a monolayer-confined microchannel (depth = 1 μm) to spatially confine micron-scale particles in
+                    2D, enabled precise probing of low-dimensional dynamics.</li>
                 </p>
             </div>
+
+            <div data-date="2020.09 – 2020.07">
+                <h3>Machine Learning in Calcium Carbonate Nucleation Mechanism</h3>
+                <div class="header-row"> <!-- 新增包裹容器 -->
+                    <h4>
+                        <span>Supervisor: Prof. Richard Lakerveld</span>
+                    </h4>
+                    <h5>
+                        HKUST
+                    </h5>
+                </div>
+                <p>
+                    <li style="margin-bottom: 10px;">Developed a conductivity-based kinetic assay for CaCO₃ nucleation in supersaturated solutions, correlating
+                    ion depletion rates with amorphous-to-crystalline phase transitions</li>
+                    <!-- <br> -->
+                    <li>Trained an ensemble learning algorithm <em>(MATLAB)</em> on multimodal data (conductivity/pH/temperature),
+                    predicting dominant nucleation pathways (dense liquid phase vs. direct ion attachment) with >92% accuracy.</li>
+                </p>
+            </div>            
+
+            <div data-date="2018.09 – 2020.07">
+                <h3>Machine Learning Assisted Discovery in Porous Carbon</h3>
+                <div class="header-row"> <!-- 新增包裹容器 -->
+                    <h4>
+                        <span>Supervisor: Prof. Jian Lin</span>
+                    </h4>
+                    <h5>
+                        MIZZOU
+                    </h5>
+                </div>
+                <p>
+                    <li style="margin-bottom: 10px;">Constructed a database of 2,100+ porous carbon samples with 12 descriptors (SSA: 200–3,500 m²/g, PSD:
+                    0.5–50 nm, surface functionalities) for methane uptake prediction (±3.5% error vs. experimental).</li>
+                    <!-- <br> -->
+                    <li>Developed a <em>hybrid MLP-GBDT model</em> trained on CO₂ adsorption isotherms to predict CO₂/CH₄ selectivity ratios, achieving 90% accuracy in 
+                        identifying top-performing materials for natural gas purification.</li>
+                </p>
+            </div>                        
+
+            <div data-date="2018.08 – 2019.08">
+                <h3>Electrochemical Performance of Cathode Material</h3>
+                <div class="header-row"> <!-- 新增包裹容器 -->
+                    <h4>
+                        <span>Supervisor: Prof. Yangchuan Xing</span>
+                    </h4>
+                    <h5>
+                        MIZZOU
+                    </h5>
+                </div>
+                <p>
+                    <li style="margin-bottom: 10px;">Conducted experiments including preparing and synthesizing LiMn<sub>0.4</sub>Ni<sub>0.4</sub>Co<sub>0.2</sub>O<sub>2</sub>
+                    layered compounds, assembled coin cells under vacuum condition, operated ARBIN battery tester independently.</li>
+                    <!-- <br> -->
+                    <li>Selected material characterization methods and analyzed test data <em>(MATLAB)</em> independently.</li>
+                </p>
+            </div>                        
+
 
         </div>
     </div>
@@ -125,12 +202,32 @@
         <!-- One Education Block -->
         <div class="education-block">
             <h3>The Hong Kong University of Science and Technology</h3>
-            <span class="education-date">2009.09 - 2013.07</span>
-            <h4>Nanoscience and Technology (PhD)</h4>
+            <span class="education-date">2021.09 - Present</span>
+            <h4 style="margin-bottom: 7px;">Nanoscience and Technology (PhD)</h4>
             <p>
-                Study on soft matter and phase transitions. 
+                RedBird PhD (top 5%) Scholarship
             </p>
         </div>
+
+        <div class="education-block">
+            <h3>The Hong Kong University of Science and Technology</h3>
+            <span class="education-date">2020.09 - 2021.08</span>
+            <h4 style="margin-bottom: 7px;">Master of Chemical & Biomolecular Engineering</h4>
+            <p>
+                School of Engineering Excellent Student (top 3%) <br>
+                <strong>GPA: 3.86/4.3 (Excellent)</strong>
+            </p>
+        </div>
+        
+        <div class="education-block">
+            <h3>University of Missouri-Columbia, U.S.A.</h3>
+            <span class="education-date">2016.08 - 2020.05</span>
+            <h4 style="margin-bottom: 7px;">Bachelor of Chemical Engineering</h4>
+            <p>
+                Member of Tau Beta Pi (top 3%) <br>
+                <strong>GPA: 3.89/4.0 (Magna Cum Laude)</strong>
+            </p>
+        </div>        
         <!-- End of One Education Block -->
 
 
@@ -318,43 +415,81 @@
     <!-- End #projects -->
 
     <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>普通话一级甲等</li>
-            <li>大学英语四级</li>
-            <li>大学英语六级</li>
-            <li>全国计算机二级考试</li>
+        <h2 style="margin-bottom: 20px;" class="heading">Language Skills</h2>
+        <ul style="margin-bottom: 20px;">
+            <li>Mandarin</li>
+            <li>Cantonese</li>
+            <li>English</li>
+            <li>German</li>
+        </ul>
+        <h2 style="margin-bottom: 20px;" class="heading">Computer Languages</h2>
+        <ul style="margin-bottom: 20px;">
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>JAVA</li>
+            <li>Swift</li>
+            <li>MatLab</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h2 style="margin-bottom: 20px;" class="heading">Software Skills</h2>
+        <ul style="margin-bottom: 0px;">
+            <li>COMSOL</li>
+            <li>LAMMPS</li>
+            <li>Blender</li>
+            <li>Aspen Plus</li>
+            <li>SolidWorks</li>
+            <li>AutoCAD</li>
+            <li>Adobe After Effects</li>
+            <li>Premiere</li>
+            <li>Audtion</li>
         </ul>
     </div>
     <!-- End #skills -->
 
     <div id="contact">
-        <h2>联系方式</h2>
+        <h2>Contact Info</h2>
         <div id="contact-form">
 
             <!-- One Social Icon Block -->
-            <article>
-                <i class="fa fa-envelope fa-fw"></i>
-                <span>88888888@qq.com</span>
-            </article>
+            <a href="mailto:phuaab@connect.ust.hk" class="email-link">
+                <article>
+                    <i class="fa fa-envelope fa-fw"></i>
+                    <span>phuaab@connect.ust.hk</span>
+                </article>
+            </a>
             <!-- End of One Social Icon Block -->
 
             <article>
                 <i class="fa fa-phone fa-fw"></i>
-                <span>13868686868</span>
+                <span>(+86)13316921389, HK: (+1)54833255</span>
             </article>
             <article>
                 <i class="fa fa-home fa-fw"></i>
-                <span>301, 24 test St, Montreal, QC, H1A2C2</span>
+                <span>Lab 4141, Physics department, HKUST, Hong Kong</span>
             </article>
             <article>
                 <i class="fa fa-weixin fa-fw"></i>
-                <span>13868686868</span>
+                <span>huapeng1050186756</span>
             </article>
-            <article>
+            <!-- <article>
+                <a href="https://github.com/phuaab" class="github-link">
+                    <i class="fa fa-github fa-fw"></i>
+                    <span>https://github.com/phuaab</span>
+                </a>
+            </article> -->
+            <a href="https://github.com/phuaab" target="_blank"> <!-- target="_blank" 表示新标签页打开 -->
+                <article>
+                    <i class="fa fa-github fa-fw"></i>
+                    <span>https://github.com/phuaab</span>
+                </article>
+            </a>            
+            <!-- <article>
                 <i class="fa fa-qq fa-fw"></i>
-                <span>78787878</span>
-            </article>
+                <span>huapeng</span>
+            </article> -->
         </div>
         <!-- End #contact-form -->
     </div>

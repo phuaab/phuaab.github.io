@@ -961,7 +961,7 @@ footer {
         max-height: auto;
         padding: 100px 15px
         background-repeat: no-repeat;
-        background-size: cover; /* 关键修改：高度100%填充，宽度自适应 */
+        background-size: auto 100%; /* 关键修改：高度100%填充，宽度自适应 */
         background-position: center; 
         overflow: hidden; 隐藏溢出的左右部分 
     }

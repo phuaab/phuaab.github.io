@@ -229,7 +229,7 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+    box-shadow: 0 1px 3px rgba(255, 0, 0, 0.12), 0 1px 2px rgba(255, 0, 0, 0.24)
 }
 
 .shadow-large {
@@ -386,6 +386,45 @@ footer {
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
     padding-top: 5px
+}
+
+.modal-image {
+    position: relative;
+}
+
+.nav-btn {
+    position: absolute;     /* 定位按钮需要更改位置有点偏 */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.nav-btn:hover {
+    opacity: 1;
+}
+
+#btn-prev {
+    left: 20px;
+}
+
+#btn-next {
+    right: 20px;
+}
+
+#video-prev{
+    left: 20px;
+}
+
+#video-next{
+    right: 20px;
 }
 
 @keyframes pulsate {
@@ -610,7 +649,7 @@ footer {
     padding: 0 0 0 15px
 }
 
-#projects {
+#projects {         /* ​**#projects 容器** */
     padding: 50px 15px;
     border-bottom: 1px solid #dcd9d9;
     text-align: center
@@ -621,14 +660,15 @@ footer {
     margin-bottom: 50px
 }
 
-#projects .container {
-    display: flex;
+#projects .container {      /* 项目容器** */
+    display: flex;     /* 启用弹性布局 */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center
 }
 
-.project {
+
+.project {         /* 项目容器 .project */
     position: relative;
     min-width: 300px;
     height: 300px;
@@ -638,6 +678,31 @@ footer {
     background: #fff;
     border-radius: 4px
 }
+
+/* 新增CSS */
+.project-content {
+    display: flex; 
+    gap: 20px;
+    align-items: flex-start;
+}
+.project-text { 
+    flex: 1; 
+    text-align: left; 
+}
+
+.project-content { flex-direction: column; height: 100%; width: 100% /* 容器需明确高度 */}    /* 子元素垂直排列 */
+.project-image { display: block; width: 100%; height: 90%}     /* 图片宽度占满容器 */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 关键属性：裁剪多余部分 */
+}
+.project-text {
+    font-size: 0.9em;
+    height: 10%;
+    text-align: center; /* 文字居中 */
+    margin-top: -45px; /* 与图片间距 */
+}    
 
 .project-game {
     position: relative;
@@ -671,7 +736,7 @@ footer {
 .project-info h3 {
     font-size: 1.5em;
     font-weight: 300;
-    color: #374054;
+    color: #1958e0;
     margin: 0 0 15px 0
 }
 
@@ -692,13 +757,55 @@ footer {
     display: none
 }
 
-.project-image .image {
+.project-image .image {     /* 项目图片容器 */
     cursor: pointer;
     transition: 0.3s
 }
 
-.project-image .image:hover {
-    opacity: 0.7
+.project-image .image:hover {       /* 鼠标悬停时的效果 */
+    opacity: 0.8; /* 透明度变化 */
+    /* 增加fantastic效果 */
+    scale: 1.05; /* 放大效果 */
+    transform: translateY(-5px); /* 向上移动5px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    border-radius: 4px; /* 圆角效果 */
+    transition: all 0.3s ease; /* 平滑过渡 */
+    filter: brightness(1.1); /* 亮度降低 */
+}
+
+.project-video img {     /* 项目图片容器 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 关键属性：裁剪多余部分 */
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.project-video .image:hover {       /* 鼠标悬停时的效果 */
+    opacity: 0.8; /* 透明度变化 */
+    /* 增加fantastic效果 */
+    scale: 1.05; /* 放大效果 */
+    transform: translateY(-5px); /* 向上移动5px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    border-radius: 4px; /* 圆角效果 */
+    transition: all 0.3s ease; /* 平滑过渡 */
+    filter: brightness(1.1); /* 亮度降低 */
+}
+
+.project-text {
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.project-text:hover {
+    opacity: 0.7;
+    /* 增加fantastic效果 */
+    scale: 1.05; /* 放大效果 */
+    transform: translateY(-2px); /* 向上移动5px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    border-radius: 4px; /* 圆角效果 */
+    transition: all 0.3s ease; /* 平滑过渡 */
+    filter: brightness(1.1); /* 亮度降低 */    
 }
 
 .project-video .image {
@@ -723,7 +830,7 @@ footer {
     display: none;
     position: fixed;
     z-index: 100;
-    padding-top: 100px;
+    padding-top: 60px;      /* 减少顶部间距 */
     left: 0;
     top: 0;
     width: 100%;
@@ -732,6 +839,76 @@ footer {
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.9)
 }
+
+/* 新增：模态内容容器（Flex布局） */
+.modal-container {
+    position: relative;
+    display: flex;
+    flex: 1; 
+    min-height: 0;      /* 修复Flex容器高度塌陷 */
+    margin: 0 auto;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.modal-container-video {
+    position: relative;
+    display: flex;  
+    flex: 1;
+    min-height: 0;      /* 修复Flex容器高度塌陷 */
+    margin: 0 auto;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+}    
+
+/* 图片区域样式 */
+.modal-image {
+    flex: 1;
+    min-width: 50%;
+}
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保持图片比例完整显示 */
+    margin: 0 auto;
+}
+/* 视频样式 */
+.modal-video {
+  position: relative;
+  width: 100%; 
+  padding-top: 56.25%; 
+  background: #000;
+}
+
+.modal-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 关键！保持比例完整显示 */
+}
+
+
+/* 新增：文字描述区域 */
+.description-panel {
+    flex: 0 0 30%;
+    padding: 25px;
+    color: #eee;
+    overflow-y: auto;
+    background: rgba(30, 30, 30, 0.95);
+    border-left: 1px solid #444;
+}
+.description-panel h3 {
+    margin-top: 0;
+    color: #4fc3f7;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
 
 .modal-content {
     margin: auto;
@@ -774,6 +951,7 @@ footer {
 
 .overlay-viewer .close {
     position: absolute;
+    z-index: 9999; /* 设置足够高的值 */
     top: 15px;
     right: 35px;
     color: #f1f1f1;
@@ -1062,6 +1240,77 @@ a:hover span {
         display: block
     }
 
+    .modal-container {
+        position: relative;
+        display: flex;  
+        flex: 1;
+        min-height: 0;      /* 修复Flex容器高度塌陷 */
+        margin: 0 auto;
+        flex-direction: column;
+        height: 100vh;  /* 父容器占满视口 */
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .modal-container-video {
+        position: relative;
+        display: flex;  
+        flex: 1;
+        min-height: 0;      /* 修复Flex容器高度塌陷 */
+        margin: 0 auto;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 8px;
+    }    
+    
+    .description-panel {
+        min-height: 0; /* 关键修复：阻止内容无限扩展 */
+        flex: 0 0 30%;
+        overflow-y: auto; /* 允许滚动 */
+        overscroll-behavior: contain; /* 防止滚动链干扰 */
+        -webkit-overflow-scrolling: touch; /* iOS设备平滑滚动 */
+    }    
+
+    .modal-image {
+        position: relative;
+    }    
+    /* 图片区域样式 */
+    .modal-image {
+        flex: 1;
+        min-width: 0%;
+        display: flex; /* 新增：启用Flex布局 */
+        justify-content: safe center; /* 自动切换对齐方式 */
+        align-items: center; /* 垂直居中 */
+        overflow-y: hidden; /* 禁止垂直滚动 */
+        overflow-x: auto; /* 关键：启用横向滚动条 */
+        flex-shrink: 0; /* 禁止收缩，保持原始宽度 */
+        scroll-behavior: smooth; /* 平滑滚动 */
+        -webkit-overflow-scrolling: touch; /* 优化移动端滚动 */
+    }
+    .modal-image img {
+        width: auto; /* 关键修改：宽度自适应 */
+        height: 90%;
+        object-fit: contain; /* 完整显示图片，避免裁剪 */
+        margin: 0 auto;
+    }
+
+    /* 视频样式 */
+    .modal-video {
+        position: relative;
+        width: 100%; 
+        padding-top: 75%;
+        background: #000;
+    }
+
+    .modal-video video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* 关键！保持比例完整显示 */
+    }    
+
     #menu {
         height: 100%;
         overflow-y: auto;
@@ -1094,6 +1343,33 @@ a:hover span {
     .education-block h3,
     .education-block span {
         float: none
+    }
+
+    .project-content { flex-direction: column}    /* 子元素垂直排列 */
+    .project-image { display: block; width: 100%; height: 90%}     /* 图片宽度占满容器 */
+    
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 关键属性：裁剪多余部分 */
+    }
+    .project-text {
+        text-align: center; /* 文字居中 */
+        margin-top: -45px; /* 与图片间距 */
+    }    
+
+    .overlay-viewer {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;      /* 减少顶部间距 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
     }
 
     .project-info {

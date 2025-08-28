@@ -1,10 +1,8 @@
 /*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+    Title: Dev Portfolio 
+    Version: 1.1.2
+    Last Change: 08/28/2025
+    Author: HUA Peng
 
     Description: This file contains all the styles associated with the page
     that don't come from third party libraries. This file gets compiled using
@@ -393,7 +391,7 @@ footer {
 }
 
 .nav-btn {
-    position: absolute;     /* 定位按钮需要更改位置有点偏 */
+    position: fixed;     /* 定位按钮需要更改位置有点偏 */
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.5);
@@ -412,11 +410,11 @@ footer {
 }
 
 #btn-prev {
-    left: 20px;
+    left: 30px;
 }
 
 #btn-next {
-    right: 20px;
+    right: 30px;
 }
 
 #video-prev{

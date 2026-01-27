@@ -761,14 +761,15 @@ footer {
 }
 
 .project-image .image:hover {       /* 鼠标悬停时的效果 */
-    opacity: 0.8; /* 透明度变化 */
+    opacity: 0.95; /* 透明度调整：1为不透明，越小越透明 */
     /* 增加fantastic效果 */
     scale: 1.05; /* 放大效果 */
     transform: translateY(-5px); /* 向上移动5px */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
     border-radius: 4px; /* 圆角效果 */
     transition: all 0.3s ease; /* 平滑过渡 */
-    filter: brightness(1.1); /* 亮度降低 */
+    /* 亮度微调，增加对比度(1.1表示增加10%对比度) */
+    filter: brightness(1.02) contrast(1.1);
 }
 
 .project-video img {     /* 项目图片容器 */
@@ -780,14 +781,15 @@ footer {
 }
 
 .project-video .image:hover {       /* 鼠标悬停时的效果 */
-    opacity: 0.8; /* 透明度变化 */
+    opacity: 0.95; /* 透明度调整 */
     /* 增加fantastic效果 */
     scale: 1.05; /* 放大效果 */
     transform: translateY(-5px); /* 向上移动5px */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
     border-radius: 4px; /* 圆角效果 */
     transition: all 0.3s ease; /* 平滑过渡 */
-    filter: brightness(1.1); /* 亮度降低 */
+    /* 亮度微调，增加对比度(1.1表示增加10%对比度) */
+    filter: brightness(1.02) contrast(1.1);
 }
 
 .project-text {
@@ -796,23 +798,20 @@ footer {
 }
 
 .project-text:hover {
-    opacity: 0.7;
+    opacity: 0.95;
     /* 增加fantastic效果 */
     scale: 1.05; /* 放大效果 */
     transform: translateY(-2px); /* 向上移动5px */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
     border-radius: 4px; /* 圆角效果 */
     transition: all 0.3s ease; /* 平滑过渡 */
-    filter: brightness(1.1); /* 亮度降低 */    
+    /* 亮度微调，增加对比度(1.1表示增加10%对比度) */
+    filter: brightness(1.02) contrast(1.1);
 }
 
 .project-video .image {
     cursor: pointer;
     transition: 0.3s
-}
-
-.project-video .image:hover {
-    opacity: 0.7
 }
 
 .project-glb .image {
@@ -997,6 +996,66 @@ footer {
     list-style: none;
     cursor: default;
     font-size: 1.2em
+}
+
+/* =========================================
+   User Requested Enhancements: Hover Effects
+   ========================================= */
+
+/* 1. About Me Section */
+#about .container {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#about .container:hover {
+    background-color: #fff;
+    transform: scale(1.02);
+    /* box-shadow: 水平偏移 垂直偏移 模糊半径 颜色(rgba中最后一个数字0.1控制深浅，范围0-1，越大越深) */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Experience Section (Timeline Blocks) */
+.vtimeline-content {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.vtimeline-content:hover {
+    transform: scale(1.03);
+    /* 阴影浓度设为 0.15 */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    /* 边框颜色 #3498db (蓝色)，可修改为其他颜色代码 */
+    border-color: #3498db;
+}
+
+/* 3. Education Section (Education Blocks) */
+.education-block {
+    transition: all 0.3s ease;
+    position: relative;
+    background: #fff;
+}
+
+.education-block:hover {
+    transform: scale(1.03);
+    /* 阴影浓度设为 0.15 */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    border-color: #3498db;
+}
+
+/* 4. Research Projects & Video Demos (Project Cards) */
+.project {
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    /* 阴影浓度设为 0.2 (更深一点) */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0);
+    z-index: 10;
 }
 
 #contact {
